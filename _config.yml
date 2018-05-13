@@ -1,0 +1,12 @@
+title: Desole test site 
+description: >- # this means to ignore newlines until "baseurl:"
+  Test website for Desole
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+# Build settings
+markdown: kramdown
+app_version: 4.5.6
+app_name: "DesoleTest"
+app_stage: "dev"
+desole_api_url: https://h41ckflcrc.execute-api.us-east-1.amazonaws.com/prod/desole
+desole_url: https://desole.io/public/1.0.0/client.js

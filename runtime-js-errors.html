@@ -1,0 +1,50 @@
+---
+layout: page
+---
+
+<button id="uncaughtException">Uncaught exception</button>
+<button id="uncaughtSyntaxError">Uncaught Syntax error</button>
+<button id="uncaughtStrictError">Uncaught Strict-mode error</button>
+<button id="uncaughtString">Uncaught string error</button>
+<button id="uncaughtPromise">Uncaught Promise rejection</button>
+<hr/>
+<button id="capturedException">Manually tracked exception</button>
+<button id="capturedPromise">Manually tracked Promise</button>
+
+<script>
+	window.uncaughtException.addEventListener('click', function() {
+		throw new Error('uncaughtException');	
+	});
+	window.uncaughtSyntaxError.addEventListener('click', function() {
+		'use strict';
+		const i = 0;
+		i+/;
+	});
+
+	window.uncaughtStrictError.addEventListener('click', function() {
+		'use strict';
+		const i = 0;
+		i = 5;
+	});
+	window.uncaughtString.addEventListener('click', function() {
+		throw 'uncaughtString';	
+	});
+	window.capturedException.addEventListener('click', function () {
+		try {
+			throw new Error('capturedException');	
+		} catch (e) {
+			window.Desole.captureException(e)
+		}
+	});
+	window.uncaughtPromise.addEventListener('click', function() {
+		Promise.reject('uncaughtPromise');	
+	});
+	window.capturedPromise.addEventListener('click', function () {
+		Promise.resolve()
+		.then(() => {
+			throw new Error('capturedPromise');	
+		})
+		.catch(window.Desole);
+	});
+
+</script>
