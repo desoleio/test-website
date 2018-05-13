@@ -5,8 +5,9 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # Build settings
 markdown: kramdown
-app_version: 4.5.6
+app_version: 4.5.8
 app_name: "DesoleTest"
 app_stage: "dev"
-desole_api_url: https://h41ckflcrc.execute-api.us-east-1.amazonaws.com/prod/desole
-desole_url: https://desole.io/public/1.0.0/client.js
+desole_api_url: https://8sc2jwgra6.execute-api.us-east-1.amazonaws.com/Prod/desole
+desole_url: https://desole.io/code/1.0.0/client-min.js
+desole_hash: sha384-RJpzB9k3WRLZZ0Th8DoSiEWUYMmt5+9fxLajledFE5PY/23D+tHatLo38g/LDc7z

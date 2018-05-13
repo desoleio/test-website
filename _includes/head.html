@@ -1,3 +1,14 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<script src="{{site.desole_url}}" integrity="{{site.desole_hash}}" crossorigin="anonymous"></script>
+<script>
+	var desole = new Desole({
+		url: '{{site.desole_api_url}}',
+		app: {
+			name: '{{site.app_name}}', 
+			version: '{{site.app_version}}', 
+			stage: '{{site.app_stage}}' 
+		}
+	})
+</script>
 

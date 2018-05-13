@@ -18,7 +18,7 @@ window.capturedException.addEventListener('click', function () {
 	try {
 		throw new Error('capturedException');
 	} catch (e) {
-		window.Desole.captureException(e)
+		window.desole.captureException(e)
 	}
 });
 window.uncaughtPromise.addEventListener('click', function() {
@@ -29,6 +29,8 @@ window.capturedPromise.addEventListener('click', function () {
 		.then(() => {
 			throw new Error('capturedPromise');
 		})
-		.catch(window.Desole);
+		.catch((e) => {
+			window.desole.captureException(e);
+		});
 });
 
