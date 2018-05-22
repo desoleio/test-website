@@ -1,5 +1,6 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+{%if site.client_script == 'desole' %}
 <script src="{{site.desole_url}}" integrity="{{site.desole_hash}}" crossorigin="anonymous"></script>
 <script>
 	var desole = new Desole({
@@ -11,4 +12,11 @@
 		}
 	})
 </script>
-
+{%elsif site.client_script == 'raven' %}
+	<script src="https://cdn.ravenjs.com/3.25.2/raven.min.js" crossorigin="anonymous"></script>
+	<script>Raven.config('{{site.desole_api_url}}').install();</script>
+{%else%}
+		<script>
+			console.log('site.client_script not configured');
+		</script>
+{%endif%}

@@ -11,3 +11,4 @@ app_stage: "dev"
 desole_api_url: https://8sc2jwgra6.execute-api.us-east-1.amazonaws.com/Prod/desole
 desole_url: https://desole.io/code/1.0.0/client-min.js
 desole_hash: sha384-RJpzB9k3WRLZZ0Th8DoSiEWUYMmt5+9fxLajledFE5PY/23D+tHatLo38g/LDc7z
+client_script: raven
